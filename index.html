@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="public/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form action="/signin" method="POST">
+                        <div class="field input-field">
+                            <input type="email" id="uname"placeholder="Email" name="email" class="input">
+                           </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" name="pwd" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <div class="field button-field" >
+                           <button onclick="validate">Login</button> 
+
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="./index.html" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="https://www.facebook.com/konceptslab" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="https://www.google.co.in/" class="field google">
+                        <div class="g-icon">                        
+                            <img src="https://res.cloudinary.com/diuq0mz3b/image/upload/v1677575853/google_f5pszn.png" alt="">
+                        </div>
+                        <div>
+                            <span>Login with Google</span>
+                        </div>
+                    </a>
+                </div>
+                
+    <div class="form signup">
+        <div class="form-content">
+            <header>Signup</header>
+            <form action="/signup" method="POST">
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" name="email" class="input">
+                </div>
+    
+                <div class="field input-field">
+                    <input type="password" id="newpswd" placeholder="Create password" name="newpswd" class="password" >
+                                     
+                </div>
+    
+                <div class="field input-field">
+                    <input type="password" placeholder="Confirm password" name="cnfpswd" class="password">
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+    
+                <div class="field button-field">
+                    <button onclick="validate">SignUp</button> 
+                </div>
+            </form>
+    
+            <div class="form-link">
+                <span>Already have an account? <a href="index.html" class="link login-link">Login</a></span>
+            </div>
+        </div>
+
+            </div>
+        </section>
+
+        <script src="app.js"></script>
+
+    </body>
+    <script>
+        function validate()
+        {
+        const password=document.getElementById("pwd").value;
+        const uname=document.getElementById("uname").value;
+        if(password.value=="123" && uname.value=="123@123.com")
+        {
+        alert("You are Logged In")
+        }
+        else{
+        alert("Wrong Pasword Login Unsuccessfull")
+        }
+        }
+    </script>
+</html>
